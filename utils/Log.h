@@ -7,8 +7,6 @@
 #include <Eigen/SparseCore>
 #include <chrono>
 
-// #include <aadc/aadc_matrix.h>
-
 typedef Eigen::SparseMatrix<double> SparseMatrixType;
 
 namespace Log{
@@ -36,37 +34,6 @@ namespace Log{
         std::cout << "Matrix " << str << ": (" << A.rows() << ", " << A.cols() << ")";
         std::cout << ", norm: " << A.norm() << std::endl;
     }
-    // double normSM(const aadc::ScalarMatrix& A)
-    // {
-    //     double res = 0;
-    //     for (uint64_t i = 0; i < A.rows(); ++i) {
-    //         for (uint64_t j = 0; j < A.cols(); ++j) {
-    //                 res += A[i][j]*A[i][j];
-    //         }
-    //     }
-    //     return std::sqrt(res);
-    // }
-    /// log function to print matrix related data 
-    // void logA_SM(const aadc::ScalarMatrix& A, const std::string& str){
-    //     std::cout << "Matrix " << str << ": (" << A.rows() << ", " << A.cols() << ")";
-    //     std::cout << ", norm: " << Log::normSM(A) << std::endl;
-    // }
-    // double norm_iM(const aadc::iMatrix& A)
-    // {
-    //     double res = 0;
-    //     for (uint64_t i = 0; i < A.rows(); ++i) {
-    //         for (uint64_t j = 0; j < A.cols(); ++j) {
-    //                 res += A[i][j].val*A[i][j].val;
-    //         }
-    //     }
-    //     return std::sqrt(res);
-    // }
-    /// log function to print matrix related data 
-    // void logA_iM(const aadc::iMatrix& A, const std::string& str){
-    //     std::cout << "Matrix " << str << ": (" << A.rows() << ", " << A.cols() << ")";
-    //     std::cout << ", norm: " << Log::norm_iM(A) << std::endl;
-    // }
-
     // void check_orth_matrix(const Eigen::MatrixXd& A, const std::string matrixName, bool full_print = false)
     void check_orth_matrix(Eigen::MatrixXd A, const std::string matrixName, bool full_print = false)
     {   

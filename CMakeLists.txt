@@ -3,4 +3,4 @@ cmake_minimum_required(VERSION 3.10)
         
     add_subdirectory(rSVD)
     # add_subdirectory(AAD)
-    # add_subdirectory(....)
+    add_subdirectory(rSVDxAAD)

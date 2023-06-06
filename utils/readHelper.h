@@ -8,6 +8,8 @@
 #include <fstream>
 #include <Eigen/Sparse>
 
+#include <random>
+
 using Eigen::SparseMatrix;
 
 typedef SparseMatrix<double> SparseMatrixType;
@@ -36,4 +38,12 @@ void readSparseMatrix( SparseMatrixType& A, const std::string& filepath = "ml.tx
 
     A.resize(m,n);
     A.setFromTriplets(tripletList.begin(), tripletList.end());
+}
+
+double sample(double dummy)
+{
+    std::random_device rd;
+    std::mt19937_64 rng(rd());
+    std::normal_distribution<double> nd;
+    return nd(rng);
 }

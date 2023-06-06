@@ -278,8 +278,6 @@ int main()
     readSparseMatrix(A, "../../utils/ml.txt", m, n);
     MatrixXd ADense = MatrixXd(A);
 
-    // sample(A, 0.25f);
-    // MatrixXd ADense = MatrixXd(A);
 
     // MatrixXd ADense = MatrixXd::Random(m,n);
     
